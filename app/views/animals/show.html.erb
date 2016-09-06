@@ -1,3 +1,8 @@
 <h1><%= @animal.name %></h1>
 
+<p><%= link_to "edit", edit_animal_path(@animal) %> </p>
+<p><%= link_to "delete", animal_path(@animal),
+                          :data => {:confirm => "You sure?",
+                                    :method => "delete"} %> </p>
+
 <p><%= link_to "return to animals", animals_path %></p>
