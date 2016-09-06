@@ -1,0 +1,16 @@
+<% if @region.sightings.any? %>
+  <h4>Here are the recent sightings of this region:</h4>
+
+  <ul>
+    <% @region.sightings.each do |sighting| %>
+      <li>
+        <%= sighting.date %> |
+        <%= sighting.lat %> |
+        <%= sighting.long %> |
+        <%= sighting.animal.name %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no sightings yet!</p>
+<% end %>

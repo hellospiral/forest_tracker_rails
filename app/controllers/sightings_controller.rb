@@ -1,8 +1,15 @@
 class SightingsController < ApplicationController
+  has_scope: region
+
   def new
     @regions = Region.all
     @animal = Animal.find(params[:animal_id])
     @sighting = @animal.sightings.new
+  end
+
+  def index
+    @sightings = Sighting.all
+    render :index
   end
 
   def create

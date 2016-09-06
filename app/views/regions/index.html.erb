@@ -2,10 +2,12 @@
 
 <ul>
   <% @regions.each do |region| %>
-    <li><%= region.name %></li>
+    <li><%= link_to region.name, region_path(region) %></li>
   <% end %>
 </ul>
 
 <hr>
 
 <%= link_to "Add a region", new_region_path %>
+
+<%= link_to "Animals", animals_path %>

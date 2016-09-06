@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     resources :sightings
   end
 
+  resources :sightings
 
 end

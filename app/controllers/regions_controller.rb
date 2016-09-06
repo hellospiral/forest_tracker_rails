@@ -18,6 +18,11 @@ class RegionsController < ApplicationController
     end
   end
 
+  def show
+    @region = Region.find(params[:id])
+    render :show
+  end
+
   private
   def region_params
     params.require(:region).permit(:name)

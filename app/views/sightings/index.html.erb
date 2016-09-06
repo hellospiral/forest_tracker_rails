@@ -1,0 +1,13 @@
+<h1>Current Sightings:</h1>
+
+<ul>
+  <% @sightings.each do |sighting| %>
+    <li>
+      <%= sighting.animal.name %> |
+      <%= sighting.date %> |
+      <%= sighting.lat %> |
+      <%= sighting.long %> |
+      <%= sighting.region.name %> |
+    </li>
+  <% end %>
+</ul>
