@@ -1,0 +1,21 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: forest_ranger_development
+
+
+test:
+  <<: *default
+  database: forest_ranger_test
+
+
+production:
+  <<: *default
+  database: forest_ranger_production
+  username: forest_ranger
+  password: <%= ENV['FOREST_RANGER_DATABASE_PASSWORD'] %>
