@@ -1,6 +1,6 @@
-require 'rails_helper'
+require "rails_helper"
 
-describe Animal do
+describe Region do
   it { should validate_presence_of :name }
   it { should have_many :sightings }
 end
